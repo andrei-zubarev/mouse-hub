@@ -2,11 +2,9 @@
 
 A front-end e-commerce storefront demo built with Next.js — a modern gaming-gear shop (product catalog, PDP, cart, search, account) with careful attention to layout, motion and micro-interactions.
 
-## Screenshots
+## Demo
 
-| Home | Product page | Keyboard page |
-| --- | --- | --- |
-| ![Home page](public/screenshots/home.png) | ![Product page](public/screenshots/product.png) | ![Keyboard page](public/screenshots/keyboard.png) |
+![Site walkthrough](public/screenshots/demo.gif)
 
 ## Features
 
