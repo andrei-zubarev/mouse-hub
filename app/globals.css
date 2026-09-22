@@ -1,0 +1,177 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ───────────────────────── Дизайн-токены ───────────────────────── */
+@layer base {
+  :root {
+    /* Светлая тема — точная палитра оригинала wlmouse.com */
+    --background: 0 0% 100%; /* #ffffff */
+    --foreground: 240 6% 6%; /* почти чёрный текст */
+
+    --muted: 240 5% 96%; /* светло-серые секции #f4f4f5 */
+    --muted-foreground: 240 4% 44%; /* приглушённый серый */
+
+    --border: 240 6% 90%; /* #e5e5e7 */
+    --input: 240 6% 90%;
+    --ring: 262 83% 58%;
+
+    /* Тёмные акцентные секции (Swords / Modular / Discord / footer) */
+    --ink: 0 0% 4%; /* #0a0a0a */
+    --ink-foreground: 0 0% 98%;
+
+    /* Брендовый фиолетовый */
+    --brand: 262 83% 58%; /* #7c3aed */
+    --brand-dark: 263 70% 30%;
+    --brand-foreground: 0 0% 100%;
+
+    /* Золото/оранж — акцентный градиент */
+    --gold: 38 92% 50%; /* #f59e0b */
+    --gold-foreground: 0 0% 8%;
+
+    /* Цена на карточках товара */
+    --price: 16 84% 52%; /* оранжево-красный */
+
+    --radius: 0.75rem;
+  }
+}
+
+/* ───────────────────────── Базовые стили ───────────────────────── */
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    /* Увеличенный масштаб интерфейса — 120% от базовых 16px */
+    font-size: 120%;
+  }
+  @media (min-width: 1536px) {
+    html {
+      font-size: 125%;
+    }
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  /* Премиальный тонкий скроллбар */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--border));
+    border-radius: 9999px;
+    border: 2px solid hsl(var(--background));
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--muted-foreground) / 0.5);
+  }
+
+  ::selection {
+    background: hsl(var(--brand) / 0.85);
+    color: #fff;
+  }
+}
+
+/* ───────────────────────── Утилиты ───────────────────────── */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Золотой градиентный текст (подзаголовок «Built with Magnesium») */
+  .text-gold-gradient {
+    background-image: linear-gradient(90deg, #fbbf24 0%, #f59e0b 45%, #f97316 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* Фиолетовый бренд-градиент */
+  .text-brand-gradient {
+    background-image: linear-gradient(90deg, #a78bfa 0%, #7c3aed 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .bg-grid {
+    background-image:
+      linear-gradient(to right, hsl(var(--border) / 0.6) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(var(--border) / 0.6) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+
+  /* Маска для бесконечной ленты-маркизы */
+  .mask-fade-x {
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 8%,
+      black 92%,
+      transparent
+    );
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 8%,
+      black 92%,
+      transparent
+    );
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* Мягкое покачивание влево-вправо для недоступных опций (hover) */
+  .shake-on-hover:hover {
+    animation: shake-x 0.7s ease-in-out both;
+  }
+
+  /*
+   * Анимированное подчёркивание как на wlmouse.com (.reversed-link):
+   * градиент-линия под текстом. background-size 0%→100%, а background-position
+   * мгновенно переключается право↔лево — поэтому линия ВХОДИТ слева и
+   * ВЫХОДИТ вправо (направленный «вайп»), а не просто появляется.
+   */
+  .link-underline {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: 100%;
+    background-size: 0% 1.5px;
+    transition:
+      background-size 0.5s cubic-bezier(0.3, 1, 0.3, 1),
+      color 0.3s cubic-bezier(0.3, 1, 0.3, 1);
+  }
+  .link-underline:hover {
+    background-position-x: left;
+    background-size: 100% 1.5px;
+  }
+  /* Постоянно подчёркнутый вариант (активный пункт), уезжает так же вправо */
+  .link-underline-active {
+    background-position-x: left;
+    background-size: 100% 1.5px;
+  }
+}
+
+@keyframes shake-x {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-2px); }
+  50% { transform: translateX(2px); }
+  75% { transform: translateX(-1px); }
+}

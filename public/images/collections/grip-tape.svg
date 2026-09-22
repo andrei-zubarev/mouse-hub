@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 640" width="1000" height="640">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a0a0a"/>
+      <stop offset="1" stop-color="#171717"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="40%" r="60%">
+      <stop offset="0" stop-color="#c9a96a" stop-opacity="0.32"/>
+      <stop offset="1" stop-color="#c9a96a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#c9a96a"/>
+      <stop offset="1" stop-color="#111"/>
+    </linearGradient>
+  </defs>
+  <rect width="1000" height="640" fill="url(#bg)"/>
+  <rect width="1000" height="640" fill="url(#glow)"/>
+  <rect x="160" y="179.20000000000002" width="680" height="281.6" rx="32" fill="#141414" stroke="#c9a96a" stroke-opacity="0.5" stroke-width="2"/>
+  <text x="500" y="576" text-anchor="middle" font-family="Sora, sans-serif" font-size="35" font-weight="700" fill="#fff" fill-opacity="0.92">GRIP TAPE</text>
+  
+</svg>

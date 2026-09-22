@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a0a0a"/>
+      <stop offset="1" stop-color="#171717"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="40%" r="60%">
+      <stop offset="0" stop-color="#8b5cf6" stop-opacity="0.32"/>
+      <stop offset="1" stop-color="#8b5cf6" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8b5cf6"/>
+      <stop offset="1" stop-color="#111"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#bg)"/>
+  <rect width="800" height="1000" fill="url(#glow)"/>
+  <path d="M400 280 C288 280 264 480 264 560 C256 700 328 780 400 780 C472 780 544 700 536 560 C536 480 512 280 400 280 Z" fill="url(#body)" stroke="#8b5cf6" stroke-opacity="0.55" stroke-width="2"/>
+  <text x="400" y="900" text-anchor="middle" font-family="Sora, sans-serif" font-size="55" font-weight="700" fill="#fff" fill-opacity="0.92">MAGNESIUM</text>
+  <text x="400" y="950" text-anchor="middle" font-family="Sora, sans-serif" font-size="28" font-weight="500" fill="#fff" fill-opacity="0.5">Purple finish</text>
+</svg>

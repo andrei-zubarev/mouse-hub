@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a0a0a"/>
+      <stop offset="1" stop-color="#161616"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="42%" r="55%">
+      <stop offset="0" stop-color="#f472b6" stop-opacity="0.30"/>
+      <stop offset="1" stop-color="#f472b6" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f472b6"/>
+      <stop offset="1" stop-color="#111"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="800" fill="url(#bg)"/>
+  <rect width="800" height="800" fill="url(#glow)"/>
+  <g transform="rotate(-14 400 400)">
+    <path d="M400 215 C300 215 250 300 248 410 C246 520 300 600 400 600 C500 600 554 520 552 410 C550 300 500 215 400 215 Z"
+          fill="url(#body)" stroke="#f472b6" stroke-opacity="0.5" stroke-width="2"/>
+    <line x1="400" y1="220" x2="400" y2="400" stroke="#000" stroke-opacity="0.55" stroke-width="6"/>
+    <ellipse cx="400" cy="300" rx="34" ry="46" fill="#000" fill-opacity="0.35"/>
+  </g>
+  <text x="400" y="710" text-anchor="middle" font-family="Sora, sans-serif" font-size="34" font-weight="700" fill="#fff" fill-opacity="0.9">HUAN</text>
+</svg>
