@@ -1,63 +1,63 @@
-# MOUSE HUB — Gaming Peripherals Storefront
+# MOUSE HUB — витрина магазина игровой периферии
 
-A front-end e-commerce storefront demo built with Next.js — a modern gaming-gear shop (product catalog, PDP, cart, search, account) with careful attention to layout, motion and micro-interactions.
+Демо интернет-магазина на Next.js — современный магазин игровой периферии (каталог товаров, страница товара, корзина, поиск, личный кабинет) с проработкой вёрстки, анимаций и микро-взаимодействий.
 
-## Demo
+## Демо
 
-![Site walkthrough](public/screenshots/demo.gif)
+![Прогулка по сайту](public/screenshots/demo.gif)
 
-## Features
+## Возможности
 
-- **Full storefront UI** — announcement bar, mega-menu header, side social rail, footer, mobile menu
-- **Product catalog** — mice, Hall-effect keyboards and mousepads with dynamic `/products/[slug]` pages, color variants, add-ons and pricing
-- **Cart** — slide-out drawer cart with persisted state (Zustand)
-- **Search overlay, quick-view modal, account modal and a mocked support-chat widget**
-- **Recently viewed** products tracking
-- Built with the App Router, animated with Framer Motion, styled with Tailwind CSS + shadcn/ui primitives
+- **Полноценный UI витрины** — плашка с анонсами, шапка с мега-меню, боковая панель соцсетей, футер, мобильное меню
+- **Каталог товаров** — мыши, Hall-effect клавиатуры и коврики с динамическими страницами `/products/[slug]`, вариантами цвета, допами и ценами
+- **Корзина** — выезжающий дроуэр корзины с сохранением состояния (Zustand)
+- **Оверлей поиска, быстрый просмотр товара, модалка аккаунта и имитация чата поддержки**
+- **История просмотров** товаров
+- Собрано на App Router, анимации на Framer Motion, стили на Tailwind CSS + примитивы shadcn/ui
 
-## Tech stack
+## Стек
 
 - [Next.js 14](https://nextjs.org/) (App Router) + TypeScript
 - [Tailwind CSS](https://tailwindcss.com/) + [tailwind-merge](https://github.com/dcastil/tailwind-merge) / `class-variance-authority`
-- [Zustand](https://github.com/pmndrs/zustand) for cart / auth / UI / recently-viewed state
-- [Framer Motion](https://www.framer.com/motion/) for transitions and micro-interactions
-- [Radix UI](https://www.radix-ui.com/) primitives (dialog, slot) via shadcn/ui
-- [lucide-react](https://lucide.dev/) icons
+- [Zustand](https://github.com/pmndrs/zustand) для состояния корзины / авторизации / UI / истории просмотров
+- [Framer Motion](https://www.framer.com/motion/) для переходов и микро-анимаций
+- [Radix UI](https://www.radix-ui.com/) примитивы (dialog, slot) через shadcn/ui
+- [lucide-react](https://lucide.dev/) иконки
 
-## Project structure
+## Структура проекта
 
 ```
-app/                 # App Router routes (home, products/[slug], cart, account)
+app/                 # Роуты App Router (главная, products/[slug], cart, account)
 components/
-  home/              # Homepage sections (hero, collection grid, showcases, ...)
-  layout/            # Header, footer, side rail, drawers, modals, mobile menu
-  product/           # PDP building blocks, quick-view modal
-  shared/ & ui/       # Reusable UI primitives
-hooks/               # Custom hooks
-lib/                 # Product/order data, constants, utils
-store/               # Zustand stores (auth, cart, ui, recently-viewed)
-types/               # Shared TypeScript types
+  home/              # Секции главной страницы (hero, витрина серий, showcase, ...)
+  layout/            # Шапка, футер, боковая панель, дроуэры, модалки, мобильное меню
+  product/           # Блоки страницы товара, модалка быстрого просмотра
+  shared/ & ui/       # Переиспользуемые UI-примитивы
+hooks/               # Кастомные хуки
+lib/                 # Данные товаров/заказов, константы, утилиты
+store/               # Zustand-сторы (auth, cart, ui, recently-viewed)
+types/               # Общие типы TypeScript
 ```
 
-## Getting started
+## Запуск
 
 ```bash
 npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
+Открыть [http://localhost:3000](http://localhost:3000).
 
 ```bash
-npm run build   # production build
-npm run start   # run the production build
+npm run build   # прод-сборка
+npm run start   # запуск прод-сборки
 npm run lint    # eslint
 ```
 
-## Note
+## Примечание
 
-This is a demo/portfolio project — all products, pricing, orders and accounts are mocked; there is no real backend or checkout. Product imagery is original placeholder art generated for this project, not real photography.
+Это демо/портфолио-проект — все товары, цены, заказы и аккаунты вымышленные, реального бэкенда и оформления заказа нет. Изображения товаров — оригинальная сгенерированная графика-плейсхолдер, а не реальные фотографии.
 
-## License
+## Лицензия
 
-All rights reserved — see [LICENSE](LICENSE). This code is shared publicly for portfolio review only; it is not licensed for reuse, redistribution, or reproduction without permission.
+Все права защищены — см. [LICENSE](LICENSE). Код опубликован только для портфолио-обзора; использование, распространение или копирование без разрешения не допускается.
